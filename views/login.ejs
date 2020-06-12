@@ -1,7 +1,37 @@
 <%- include("partials/header") %>
 
-<div id="landing-header">
-    <h1>THIS IS THE <em>LOGIN</em> PAGE</h1>
-</div>
+        <div class="form-div">
+            <h1>Id requested</h1>
+            <form action = "/login" method = "POST">
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">
+                            <svg class="bi bi-person-fill" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                              </svg>
+                        </span>
+                    </div>
+                    <input class="form-control" type="text" name="username" placeholder="Username">
+                </div>
+
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">
+                            <svg class="bi bi-lock-fill" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="11" height="9" x="2.5" y="7" rx="2"/>
+                                <path fill-rule="evenodd" d="M4.5 4a3.5 3.5 0 1 1 7 0v3h-1V4a2.5 2.5 0 0 0-5 0v3h-1V4z"/>
+                            </svg>
+                        </span>
+                    </div>
+                    <input class="form-control" type="password" name="password" placeholder="Password">
+                </div>
+
+                <div class="input-group">
+                <input class="btn btn-lg btn-outline-secondary btn-block" type="submit" value = "Send">
+                </div>
+            </form>
+        <a class="form-link" href="/">Go Back</a>
+        <a class = "form-link pull-right" href = "/forgot">Forgot Password?</a>
+    </div>
 
 <%- include("partials/footer") %>
