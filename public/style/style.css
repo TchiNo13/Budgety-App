@@ -2,6 +2,9 @@ body {
     background-color: #000;
   }
   
+  /* ============================================================================================== */
+    /* NAV BAR */
+  /* ============================================================================================== */
   .navbar-brand{
     color: #fff;
   }
@@ -15,29 +18,6 @@ body {
   }
   .nav-link:hover{
     color: #b2bec3;
-  }
-  
-  .btn-outline-secondary{
-    color: #fff;
-    border-color:#6c757d
-  }
-
-  .btn-outline-secondary:hover{
-    color: #fff;
-    background-color: #78909C;
-    border-color:#78909C;
-  }
-
-  #landing-header {
-    z-index: 1;
-    position: relative;
-    text-align: center;
-    padding-top: 40vh;
-  }
-  
-  #landing-header h1, p{
-    color: #dfe4ea;
-    text-shadow: 1px 1px #000;
   }
 
   .opaque-navbar{
@@ -57,7 +37,34 @@ body {
 
   .nav>li>a:focus, .nav>li>a:hover {
     border-bottom-color: white;
-}
+  }
+
+  /* ============================================================================================== */
+    /* LANDING PAGE  */
+  /* ============================================================================================== */
+  .btn-outline-secondary{
+    color: #fff;
+    border-color:#6c757d
+  }
+
+  .btn-outline-secondary:hover{
+    color: #fff;
+    background-color: #78909C;
+    border-color:#78909C;
+  }
+
+  #landing-header {
+    z-index: 1;
+    position: relative;
+    text-align: center;
+    padding-top: 40vh;
+  }
+  
+  #landing-header h1, p{
+    color: #fff;
+    text-shadow: 1px 1px #000;
+  }
+
 
   .slideshow { 
     position: fixed;
@@ -118,3 +125,65 @@ body {
   .no-cssanimations .slideshow li {
       opacity: 1;
   }
+
+  /* ============================================================================================== */
+    /* LOGIN PAGE  */
+  /* ============================================================================================== */
+  .form-div{
+    width: 40%; 
+    margin: 120px auto;
+  }
+  .form-div h1{
+    color: #fff;
+    text-align: center;
+  }
+  .input-group
+{
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.form-link{
+  color: #fff;
+}
+
+.form-link:hover{
+  color: #b2bec3;
+  text-decoration: none;
+}
+  
+.form-control:focus{
+    color:#000;
+    background-color:#fff;
+    border-color:#b2bec3;
+    outline:0;
+    box-shadow:0 0 0 .1rem #b2bec3;
+}
+
+/* ============================================================================================== */
+    /* SIGN IN PAGE  */
+/* ============================================================================================== */
+
+  .form-div h2{
+    color: #fff;
+    
+  }
+  hr{
+    background-color: #b2bec3; 
+    height: 0.33px; 
+    border: 0;
+  }
+
+  footer {
+    font-size: small;
+  }
+/* ============================================================================================== */
+    /* ABOUT PAGE  */
+/* ============================================================================================== */
+
+.about{
+  margin-top: 120px;
+  color: #fff;
+  padding: 0 150px;
+  text-align: justify;
+}

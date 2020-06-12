@@ -30,6 +30,9 @@ app.get("/login", (req, res)=>{
 app.get("/register", (req, res)=>{
     res.render("signin");
 });
+app.get("/forgot", (req, res)=>{
+    res.render("forgot");
+});
 
 //=====================================================================
 // ERROR + SERVER ROUTES
