@@ -1,7 +1,17 @@
 body {
     background-color: #000;
+    font-family: 'Bellota Text', cursive;
   }
   
+  hr{
+    background-color: #b2bec3; 
+    height: 0.33px; 
+    border: 0;
+  }
+
+  footer {
+    font-size: small;
+  }
   /* ============================================================================================== */
     /* NAV BAR */
   /* ============================================================================================== */
@@ -37,6 +47,20 @@ body {
 
   .nav>li>a:focus, .nav>li>a:hover {
     border-bottom-color: white;
+  }
+  .navbar-toggler{
+    padding:.25rem .75rem;
+    font-size:1.25rem;
+    line-height:1;
+    background-color:transparent;
+    border:1px solid rgba(223, 230, 233,1.0);
+    border-radius:.5rem;
+  }
+  
+  
+  
+  .navbar-toggler-icon{
+    background-image:url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(223, 230, 233,1.0)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
   }
 
   /* ============================================================================================== */
@@ -89,20 +113,39 @@ body {
     background-repeat: no-repeat;
     opacity: 0;
     z-index: 0;
-    animation: imageAnimation 30s linear infinite; 
+    animation: imageAnimation 49s linear infinite; 
   }
   
   .slideshow li:nth-child(1) { 
-    background-image: url("image1.jpg");
+    background-image: url("Image1.jpg");
   }
   .slideshow li:nth-child(2) { 
-    background-image: url("image2.jpg");
-    animation-delay: 10s; 
+    background-image: url("Image2.jpg");
+    animation-delay: 7s; 
   }
   .slideshow li:nth-child(3) { 
-    background-image: url("image3.jpg");
-    animation-delay: 20s; 
+    background-image: url("Image3.jpg");
+    animation-delay: 14s; 
   }
+
+  .slideshow li:nth-child(4) { 
+    background-image: url("Image4.jpg");
+    animation-delay: 21s; 
+  }
+  .slideshow li:nth-child(5) { 
+    background-image: url("Image5.jpg");
+    animation-delay: 28s; 
+  }
+  .slideshow li:nth-child(6) { 
+    background-image: url("Image6.jpg");
+    animation-delay: 35s; 
+  }
+  
+  .slideshow li:nth-child(7) { 
+    background-image: url("Image7.jpg");
+    animation-delay: 42s; 
+  }
+  
   
   @keyframes imageAnimation { 
     0% { 
@@ -166,17 +209,8 @@ body {
 
   .form-div h2{
     color: #fff;
-    
-  }
-  hr{
-    background-color: #b2bec3; 
-    height: 0.33px; 
-    border: 0;
   }
 
-  footer {
-    font-size: small;
-  }
 /* ============================================================================================== */
     /* ABOUT PAGE  */
 /* ============================================================================================== */
@@ -187,3 +221,110 @@ body {
   padding: 0 150px;
   text-align: justify;
 }
+
+/* ============================================================================================== */
+    /* HOME PAGE  */
+ /* ============================================================================================= */
+ .clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.right { float: right; }
+.red { color: #FF5049 !important; }
+.red-focus:focus { border: 1px solid #FF5049 !important; }
+
+ .top {
+  height: 340px;
+  background-image:  linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url(Back.jpg);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.budget {
+  position: absolute;
+  margin-top: 70px;
+  width: 350px;
+  height: 350px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+ 
+}
+
+.budget__title {
+  font-size: 18px;
+  text-align: center;
+  margin-bottom: 10px;
+  font-weight: 300;
+}
+
+.budget__title--month,  
+.budget__expenses--percentage{
+  font-weight: bold;
+}
+
+.budget__income--text, 
+.budget__expenses--text{
+  color: #fff;
+  font-weight: bolder;
+}
+
+.budget__value {
+  font-weight: 300;
+  font-size: 46px;
+  text-align: center;
+  margin-bottom: 25px;
+  letter-spacing: 2px;
+}
+
+.budget__income,
+.budget__expenses {
+  padding: 12px;
+  text-transform: uppercase;
+}
+
+.budget__income {
+  margin-bottom: 10px;
+  background-color: #227093;
+}
+
+.budget__expenses {
+  background-color: #b33939;
+}
+
+.budget__income--text,
+.budget__expenses--text {
+  float: left;
+  font-size: 13px;
+  color: #444;
+  margin-top: 2px;
+}
+
+.budget__income--value,
+.budget__expenses--value {
+  letter-spacing: 1px;
+  float: left;
+}
+
+.budget__income--percentage,
+.budget__expenses--percentage {
+  float: left;
+  width: 34px;
+  font-size: 11px;
+  padding: 3px 0;
+  margin-left: 10px;
+}
+
+.budget__expenses--percentage {
+  background-color: rgba(255, 255, 255, 0.2);
+  text-align: center;
+  border-radius: 3px;
+}
+
+
+
+
