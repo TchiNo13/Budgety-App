@@ -175,9 +175,12 @@ body {
   /* ============================================================================================== */
     /* LOGIN PAGE  */
   /* ============================================================================================== */
+  
   .form-div{
-    width: 40%; 
+    width: 60%; 
     margin: 120px auto;
+    padding: 1px 40px;
+   
   }
   .form-div h1{
     color: #fff;
@@ -221,7 +224,7 @@ body {
 .about{
   margin-top: 120px;
   color: #fff;
-  padding: 50px 150px;
+  padding: 50px 50px;
   text-align: justify;
   
   
