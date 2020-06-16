@@ -221,8 +221,10 @@ body {
 .about{
   margin-top: 120px;
   color: #fff;
-  padding: 0 150px;
+  padding: 50px 150px;
   text-align: justify;
+  
+  
 }
 
 /* ============================================================================================== */
