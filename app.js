@@ -5,9 +5,17 @@ const express   = require("express"),
 //=====================================================================
 // PACKAGES REQUESTS
 //=====================================================================
+
 mongoose.connect("mongodb://localhost:27017/Budjety_V_2", { useUnifiedTopology: true, useNewUrlParser: true });
+// SET VIEWS
+app.set('views', './views');
 app.set("view engine", "ejs");
-app.use(express.static(__dirname + "/public"));
+
+// STATIC FILES 
+app.use(express.static('public'));
+app.use('/css', express.static(__dirname + "/public/css"));
+app.use('/js', express.static(__dirname + "/public/js"));
+app.use('/img', express.static(__dirname + "/public/img"));
 
 //=====================================================================
 // ROUTES

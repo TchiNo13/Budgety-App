@@ -5,14 +5,16 @@
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node app.js"
+    "start": "nodemon app.js"
   },
   "author": "Yacine TARHI",
   "license": "ISC",
   "dependencies": {
     "ejs": "^3.1.3",
     "express": "^4.17.1",
-    "mongoose": "^5.9.16",
+    "mongoose": "^5.9.16"
+  },
+  "devDependencies": {
     "nodemon": "^2.0.4"
   }
 }

@@ -8,13 +8,12 @@ body {
     height: 0.33px; 
     border: 0;
   }
-  #footer {
-    
-    margin: 17% auto 0; /* top | horizental | bottom*/
-    padding: 5px;
+
+  #footer { 
+    margin: 15% auto 0; /*top | horizental | bottom*/
     font-size: small;
-    bottom: 0;
-}
+  
+} 
   
   /* ============================================================================================== */
     /* NAV BAR */
@@ -60,7 +59,11 @@ body {
     border:1px solid rgba(223, 230, 233,1.0);
     border-radius:.5rem;
   }
-  
+
+  .navbar-toggler:focus{
+    outline: none;
+  }
+
   .navbar-toggler-icon{
     background-image:url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(223, 230, 233,1.0)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
   }
@@ -124,32 +127,32 @@ body {
   }
   
   .slideshow li:nth-child(1) { 
-    background-image: url("Image1.jpg");
+    background-image: url("/img/Image1.jpg");
   }
   .slideshow li:nth-child(2) { 
-    background-image: url("Image2.jpg");
+    background-image: url("/img/Image2.jpg");
     animation-delay: 7s; 
   }
   .slideshow li:nth-child(3) { 
-    background-image: url("Image3.jpg");
+    background-image: url("/img/Image3.jpg");
     animation-delay: 14s; 
   }
 
   .slideshow li:nth-child(4) { 
-    background-image: url("Image4.jpg");
+    background-image: url("/img/Image4.jpg");
     animation-delay: 21s; 
   }
   .slideshow li:nth-child(5) { 
-    background-image: url("Image5.jpg");
+    background-image: url("/img/Image5.jpg");
     animation-delay: 28s; 
   }
   .slideshow li:nth-child(6) { 
-    background-image: url("Image6.jpg");
+    background-image: url("/img/Image6.jpg");
     animation-delay: 35s; 
   }
   
   .slideshow li:nth-child(7) { 
-    background-image: url("Image7.jpg");
+    background-image: url("/img/Image7.jpg");
     animation-delay: 42s; 
   }
   
@@ -231,7 +234,6 @@ body {
   padding: 50px 50px;
   text-align: justify;
   
-  
 }
 
 /* ============================================================================================== */
@@ -241,19 +243,14 @@ body {
  /* ========================================= */
  /* TOP */
  /* ========================================= */
- .clearfix::after {
-  content: "";
-  display: table;
-  clear: both;
-}
 
 .right { float: right; }
 .red { color: #FF5049 !important; }
-.red-focus:focus { border: 1px solid #FF5049 !important; }
+.red-focus:focus { border: 1.4px solid #FF5049 !important; }
 
  .top {
   height: 340px;
-  background-image:  linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url(Back.jpg);
+  background-image:  linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url(/img/Back.jpg);
   background-size: cover;
   background-position: center;
   position: relative;
@@ -261,9 +258,9 @@ body {
 
 .budget {
   position: absolute;
-  margin-top: 70px;
+  margin-top: 35px;
   width: 350px;
-  height: 350px;
+  height: 250px;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -278,22 +275,11 @@ body {
   font-weight: 300;
 }
 
-.budget__title--month,  
-.budget__expenses--percentage{
-  font-weight: bold;
-}
-
-.budget__income--text, 
-.budget__expenses--text{
-  color: #fff;
-  font-weight: bolder;
-}
-
 .budget__value {
   font-weight: 300;
   font-size: 46px;
   text-align: center;
-  margin-bottom: 25px;
+  margin-bottom: 10px;
   letter-spacing: 2px;
 }
 
@@ -303,21 +289,19 @@ body {
   text-transform: uppercase;
 }
 
-.budget__income {
-  margin-bottom: 10px;
-  background-color: #227093;
-}
-
-.budget__expenses {
-  background-color: #b33939;
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
 }
 
 .budget__income--text,
 .budget__expenses--text {
   float: left;
   font-size: 13px;
-  color: #444;
+  color: #fff;
   margin-top: 2px;
+  font-weight: normal;
 }
 
 .budget__income--value,
@@ -331,6 +315,7 @@ body {
   float: left;
   width: 34px;
   font-size: 11px;
+  font-weight: lighter;
   padding: 3px 0;
   margin-left: 10px;
 }
@@ -341,11 +326,22 @@ body {
   border-radius: 3px;
 }
 
-/* ========================================= */
- /* BOTTOM */
- /* ========================================= */
+.budget__income {
+  margin-bottom: 7px;
+  background-color: #227093;
+}
 
+.budget__expenses {
+  background-color: #b33939;
+}
+
+/* ====================================================================================================== */
+ /* BOTTOM */
+ /* ===================================================================================================== */
+
+/********************************************************************/
 /***** FORM *****/
+/********************************************************************/
 .add {
   padding: 14px 0px;
   border-top: 1px solid #000;
@@ -361,6 +357,9 @@ body {
   border-radius:.5rem;
 }
 
+.add__description { width: 300px;}
+.add__value { width: 100px;}
+
 .add__description,
 .add__value {
   border: 1px solid #000;
@@ -369,9 +368,6 @@ body {
   margin-right: 5px;
   border-radius: .5rem;
 }
-
-.add__description { width: 400px;}
-.add__value { width: 100px;}
 
 .add__btn {
   font-size: 35px;
@@ -385,33 +381,34 @@ body {
   margin-left: 10px;
 }
 
-.add__btn:active { transform: translateY(2px); }
+.add__btn:active { transform: translateY(3px); }
 
 .add__type:focus,
 .add__description:focus,
 .add__value:focus {
   outline: none;
-  border: 1px solid #28B9B5;
+  border: 1.4px solid #28B9B5;
 }
 
 .add__btn:focus { outline: none; }
 
+/********************************************************************/
 /***** LISTS *****/
+/********************************************************************/
 
 .container {
   width: 1000px;
-  margin: 60px auto;
+  margin: 40px auto;
+  
 }
-
-.income {
-  float: left;
-  width: 475px;
-  margin-right: 50px;
-}
-
+.income,
 .expenses {
+  margin-top: 13px;
   float: left;
   width: 475px;
+}
+.income {
+  margin-right: 50px;
 }
 
 h2 {
@@ -421,35 +418,37 @@ h2 {
   margin-bottom: 15px;
 }
 
-.icome__title { color: #28B9B5; }
-.expenses__title { color: #FF5049; }
+.income__title { color: #28B9B5; margin-bottom: 3px;}
+.expenses__title { color: #FF5049;  margin-bottom: 3px;}
 
 .item {
   padding: 13px;
   border-bottom: 1px solid #e7e7e7;
 }
 
-.item:first-child { border-top: 1px solid #e7e7e7; }
-.item:nth-child(even) { background-color: #f7f7f7; }
+.item:first-child { border-top: 1px solid #beb6b6; }
+.item:nth-child(even) { background-color: rgb(24, 22, 22); }
 
 .item__description {
+  color: #fff;
   float: left;
 }
 
 .item__value {
   float: left;
-  transition: transform 0.3s;
+  transition: transform 0.6s;
 }
 
 .item__percentage {
   float: left;
   margin-left: 20px;
   transition: transform 0.3s;
-  font-size: 11px;
-  background-color: #FFDAD9;
+  font-size: 12px;
+  font-weight: bold;
+  background-color: #d6c9c8;
   padding: 3px;
   border-radius: 3px;
-  width: 32px;
+  width: 35px;
   text-align: center;
 }
 
@@ -484,8 +483,8 @@ h2 {
 .item__delete--btn:active { transform: translateY(2px); }
 
 .item:hover .item__delete--btn { display: block; }
-.item:hover .item__value { transform: translateX(-20px); }
-.item:hover .item__percentage { transform: translateX(-20px); }
+.item:hover .item__value { transform: translateX(-10px); }
+.item:hover .item__percentage { transform: translateX(-10px); }
 
 
 .unpaid {
